@@ -476,3 +476,38 @@ arm-none-eabi-size  Serial_Data_Print.elf
    8512	     92	   1972	  10576	   2950	Serial_Data_Print.elf
 Finished building: default.size.stdout
  
+15:15:34 **** Incremental Build of configuration Debug for project Serial_Data_Print ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:72:17: warning: unused variable 'num' [-Wunused-variable]
+   72 |         uint8_t num = 0;
+      |                 ^~~
+../Core/Src/main.c:71:14: warning: unused variable 'Message' [-Wunused-variable]
+   71 |         char Message[] = "Write anything on Serial Terminal\r\n";
+      |              ^~~~~~~
+arm-none-eabi-gcc -o "Serial_Data_Print.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\My things\Embedded Projects\STM32_Projects\Serial_Data_Print\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Serial_Data_Print.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Serial_Data_Print.elf
+ 
+arm-none-eabi-size  Serial_Data_Print.elf 
+arm-none-eabi-objdump -h -S Serial_Data_Print.elf  > "Serial_Data_Print.list"
+   text	   data	    bss	    dec	    hex	filename
+   6260	     12	   1644	   7916	   1eec	Serial_Data_Print.elf
+Finished building: default.size.stdout
+ 
+Finished building: Serial_Data_Print.list
+ 
+15:16:13 **** Incremental Build of configuration Debug for project Serial_Data_Print ****
+make -j4 all 
+arm-none-eabi-size  Serial_Data_Print.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6260	     12	   1644	   7916	   1eec	Serial_Data_Print.elf
+Finished building: default.size.stdout
+ 
+15:19:55 **** Incremental Build of configuration Debug for project Serial_Data_Print ****
+make -j4 all 
+arm-none-eabi-size  Serial_Data_Print.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6260	     12	   1644	   7916	   1eec	Serial_Data_Print.elf
+Finished building: default.size.stdout
+ 

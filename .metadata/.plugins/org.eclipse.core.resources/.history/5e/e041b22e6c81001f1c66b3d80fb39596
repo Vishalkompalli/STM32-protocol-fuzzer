@@ -67,8 +67,8 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	//uint8_t message[35] = {'\0'};
-	char Message[] = "Write anything on Serial Terminal\r\n";
+	uint8_t message[35] = {'\0'};
+	//char Message[] = "Write anything on Serial Terminal\r\n"; /* Message to be transmitted through UART */
 	uint8_t num = 0;
 
 
@@ -102,14 +102,14 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-//	  sprintf(message, "Welcome to lab! Counting = %d\r\n", num);
-//	  HAL_UART_Transmit(&huart1, message, sizeof(message), 100);
-//	  HAL_Delay(500);
-//	  num++;
+	  sprintf(message, "Welcome to lab! Counting = %d\r\n", num);
+	  HAL_UART_Transmit(&huart1, message, sizeof(message), 100);
+	  HAL_Delay(500);
+	  num++;
 
-	  uint8_t buffer[4];
-	  HAL_UART_Receive(&huart1, buffer, sizeof(buffer), HAL_MAX_DELAY);
-	  HAL_UART_Transmit(&huart1, buffer, sizeof(buffer), HAL_MAX_DELAY);
+//	  uint8_t buffer[4];
+//	  HAL_UART_Receive(&huart1, buffer, sizeof(buffer), HAL_MAX_DELAY);
+//	  HAL_UART_Transmit(&huart1, buffer, sizeof(buffer), HAL_MAX_DELAY);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
