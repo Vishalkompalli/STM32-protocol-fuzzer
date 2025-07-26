@@ -12,7 +12,8 @@
 #define RCC_APB2ENR (*(volatile uint32_t*)(RCC_BASE + 0x18))
 #define GPIOA_CRH   (*(volatile uint32_t*)(GPIOA_BASE + 0x04))
 
-void uart_init() {
+void uart_init()
+{
     RCC_APB2ENR |= (1 << 2) | (1 << 14); // Enable GPIOA and USART1 clocks
     GPIOA_CRH &= ~(0xF << 4);            // Clear PA9 config
     GPIOA_CRH |=  (0xB << 4);            // PA9: AF push-pull, 50 MHz
@@ -27,13 +28,16 @@ void uart_init() {
     USART1_CR1 = (1 << 13) | (1 << 3);   // UE, TE
 }
 
-void uart_send_char(char c) {
+void uart_send_char(char c)
+{
     while (!(USART1_SR & (1 << 7)));     // Wait until TXE
     USART1_DR = c;
 }
 
-void uart_send_string(const char* s) {
-    while (*s) {
+void uart_send_string(const char* s)
+{
+    while (*s)
+    {
         uart_send_char(*s++);
     }
 }

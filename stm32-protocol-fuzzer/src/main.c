@@ -2,7 +2,8 @@
 #include "delay.h"
 #include "fuzzer.h"
 
-int main() {
+int main()
+{
     uart_init();
     fuzzer_run();
 
