@@ -1,2 +1,3 @@
 # Ignore Eclipse/STM32CubeIDE metadata
 .metadata/
+.vscode/
