@@ -1,9 +1,9 @@
-# 🛠️ Embedded UART Protocol Fuzzer for Robustness Testing
+# Embedded UART Protocol Fuzzer for Robustness Testing
 
 ## Overview
 This repository contains a bare-metal embedded fuzzing tool built on the **STM32F103 (Blue Pill)** microcontroller. The primary goal of this project is to perform robustness and resilience testing on embedded systems that communicate via UART protocols. By injecting a variety of malformed, random, and edge-case payloads, the fuzzer simulates real-world communication faults, helping to identify potential vulnerabilities and weaknesses in a target system's protocol handler.
 
-## ⚙️ How It Works
+## How It Works
 The system operates by having the STM32 microcontroller generate a stream of unpredictable data payloads. This data is transmitted via its UART peripheral at a specified baud rate (e.g., 9600 baud) and is then logged on a host machine for analysis. The typical setup involves a simple hardware chain:
 
 <pre>
@@ -27,7 +27,7 @@ The system operates by having the STM32 microcontroller generate a stream of unp
 [Logger: timestamps + logs output]   
 </pre>
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Hardware Requirements
 * **STM32F103C8T6** (Blue Pill) development board
@@ -51,10 +51,10 @@ The system operates by having the STM32 microcontroller generate a stream of unp
 2.  Ensure the converter is recognized as `/dev/ttyUSB0`. If not, adjust the Python script accordingly.
 3.  Run the Python logger script to begin capturing the fuzzer's output.
 
-## 📁 Repository Structure
+## Repository Structure
 * `stm32-protocol-fuzzer/`: C source files for the embedded fuzzer.
 * `logger/`: Python script for capturing and logging data on the host.
 * `Makefile`: Build script for compiling the embedded firmware.
 
-## 📄 License
+## License
 This project is licensed under the MIT License - see the `LICENSE` file for details.
