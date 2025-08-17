@@ -4,18 +4,18 @@ I built a bare-metal embedded fuzzing tool on the STM32F103 (Blue Pill) that str
                           
      [Fuzzer: STM32]  
             |
-            |      (generate weird payloads) 
-            |
-[UART Peripheral: PA9/PA10]
-            |
-            |      (sends bytes at 9600 baud)
-            |
-[USB-to-Serial (PL2303)]
-            |
-            |      (converts UART to USB)
-            |
-       [Linux Host]
-            |
-            |      (Python reads /dev/ttyUSB0)
-            |
-[Logger: timestamps + logs output]
+            |      (generate weird payloads)    
+            |  
+[UART Peripheral: PA9/PA10]  
+            |  
+            |      (sends bytes at 9600 baud)  
+            |  
+[USB-to-Serial (PL2303)]  
+            |  
+            |      (converts UART to USB)  
+            |  
+       [Linux Host]  
+            |  
+            |      (Python reads /dev/ttyUSB0)  
+            |  
+[Logger: timestamps + logs output]  
