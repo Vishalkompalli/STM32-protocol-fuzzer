@@ -1,7 +1,7 @@
 # Embedded UART Protocol Fuzzer for Robustness Testing
 
 ## Overview
-This repository contains a bare-metal embedded fuzzing tool built on the **STM32F103 (Blue Pill)** microcontroller. The primary goal of this project is to perform robustness and resilience testing on embedded systems that communicate via UART protocols. By injecting a variety of malformed, random, and edge-case payloads, the fuzzer simulates real-world communication faults, helping to identify potential vulnerabilities and weaknesses in a target system's protocol handler.
+This repository contains a bare-metal embedded fuzzing tool built on the **STM32F103 (Blue Pill)** microcontroller. The primary goal of this project is to perform robustness and resilience testing(unfinished) on embedded systems that communicate via UART protocols. By injecting a variety of malformed, random, and edge-case payloads, the fuzzer simulates real-world communication faults, helping to identify potential vulnerabilities and weaknesses in a target system's protocol handler. As of now, this project just generates payloads and logs them.
 
 ## How It Works
 The system operates by having the STM32 microcontroller generate a stream of unpredictable data payloads. This data is transmitted via its UART peripheral at a specified baud rate (e.g., 9600 baud) and is then logged on a host machine for analysis. The typical setup involves a simple hardware chain:
