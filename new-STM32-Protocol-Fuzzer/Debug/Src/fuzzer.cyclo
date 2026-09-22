@@ -1,0 +1,4 @@
+../Src/fuzzer.c:8:16:random_byte	1
+../Src/fuzzer.c:15:13:send_hex	1
+../Src/fuzzer.c:23:13:send_payload	2
+../Src/fuzzer.c:35:6:fuzzer_run	5

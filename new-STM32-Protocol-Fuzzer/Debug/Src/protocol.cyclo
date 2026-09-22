@@ -1,0 +1,6 @@
+../Src/protocol.c:23:6:protocol_init	1
+../Src/protocol.c:32:13:reset_parser	1
+../Src/protocol.c:41:13:send_error	1
+../Src/protocol.c:48:13:send_hex	1
+../Src/protocol.c:56:13:process_frame	4
+../Src/protocol.c:85:6:protocol_process_byte	9
