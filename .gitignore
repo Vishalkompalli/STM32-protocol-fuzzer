@@ -1,3 +1,5 @@
 # Ignore Eclipse/STM32CubeIDE metadata
 .metadata/
 .vscode/
+.Old_stm32-protocol-fuzzer/
+.new-STM32-Protocol-Fuzzer/
