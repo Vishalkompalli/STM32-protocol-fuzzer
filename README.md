@@ -127,5 +127,3 @@ STM32-protocol-fuzzer/
 ## Status
 
 **Implementation Phase: finished**
-
-```
