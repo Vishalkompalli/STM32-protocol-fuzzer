@@ -1,6 +1,0 @@
-"./Src/delay.o"
-"./Src/fuzzer.o"
-"./Src/main.o"
-"./Src/protocol.o"
-"./Src/uart.o"
-"./Startup/startup_stm32f103c8tx.o"

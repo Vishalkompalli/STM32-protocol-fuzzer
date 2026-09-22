@@ -1,6 +1,0 @@
-../Src/protocol.c:23:6:protocol_init	4	static
-../Src/protocol.c:32:13:reset_parser	4	static
-../Src/protocol.c:41:13:send_error	16	static
-../Src/protocol.c:48:13:send_hex	48	static
-../Src/protocol.c:56:13:process_frame	16	static
-../Src/protocol.c:85:6:protocol_process_byte	16	static
